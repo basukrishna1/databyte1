@@ -3,42 +3,41 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
-const _ = require('lodash');
+const _ = require("lodash");
 
 const app = express();
 
-app.set('view engine', 'ejs');
+app.set("view engine", "ejs");
 
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 var posts = [];
 
-app.get("/", function(req,res){
+app.get("/", function (req, res) {
   res.render("about");
 });
 
-app.get("/blog", function(req,res){
-  res.render("blog");
+app.get("/blog", function (req, res) {
+  res.redirect("https://medium.com/databytenitt");
 });
 
-app.get("/members", function(req,res){
+app.get("/members", function (req, res) {
   res.render("members");
 });
 
-app.get("/compose", function(req,res){
+app.get("/compose", function (req, res) {
   res.render("compose");
 });
 
-app.post("/compose", function(req, res){
-  
+app.get("/dsoc", function (req, res) {
+  res.render("dsoc");
 });
 
-app.get("/posts/:postTitle", function(req, res){
-  
-});
+app.post("/compose", function (req, res) {});
 
+app.get("/posts/:postTitle", function (req, res) {});
 
-app.listen(3000, function() {
+app.listen(3000, function () {
   console.log("Server started on port 3000");
 });

@@ -11,7 +11,7 @@
     border: 0;
     border-radius: 0;
     margin-bottom: 0;
-    font-size: 12px;
+    font-size: 15px;
     letter-spacing: 1px;
 }
 
@@ -33,21 +33,23 @@
  footer 
 =======================*/
 .footer {
-	position: fixed;
+	position: bottom;
+  display: grid;
+  justify-content: center;
+  align-items: center;
 	text-align: center;
 	bottom: 0;
 	width: 100%;
-	height: 60px;
-	background-color: #eee;
+	height: 40vh;
+	background-color: #393e46;
 }
 
 /*=======================
  footer content
 =======================*/
 .footer p {
-	margin-top: 25px;
-	font-size: 12px;
-  color: #332d2d;
+	font-size: 20px;
+  color: white;
 }
 
 /*=======================
@@ -66,7 +68,8 @@
   margin: 0;
 }
 body{
-  background-color: #c4bebe;
+   min-height: 100vh;
+    background-image: url("./3d-network-particle-flow-background.jpg");
 }
 
 /*=======================
@@ -77,8 +80,11 @@ body{
   margin: 30px 10px 10px 10px;
   padding: 30px;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 30px;
   box-shadow: 0 0 9px rgba(0,0,0.6);
+}
+.about-1:hover{
+  background-color: #112734;
 }
 .about-1 h1{
   text-align: center;
@@ -91,6 +97,19 @@ body{
   padding: 3px;
   color: rgb(0, 0, 0);
 }
+.about-1:hover i,
+.about-1:hover h1,
+.about-1:hover p{
+  color: #fff;
+}
+.about-1:hover p,
+.about-1:hover h1{
+  transform: scale(1.1);
+}
+.about-1:hover p,
+.about-1:hover h1{
+  transition: all 400ms ease-in-out;
+}
 
 /*===========================
 about items - mission, achievements, contact us card
@@ -102,7 +121,7 @@ about items - mission, achievements, contact us card
   background-color: white;
   padding: 80px 30px;
   box-shadow: 0 0 9px rgba(0,0,0.6);
-  border-radius: 10px;
+  border-radius: 30px;
 }
 
 /*======================================
@@ -154,8 +173,196 @@ translate Y: move along the Y axis, negative(-20) moves it up, while positive(20
 .about-item:hover i{
   transform: translateY(-20px);
 }
+
 .about-item:hover i,
 .about-item:hover h3,
 .about-item:hover hr{
   transition: all 400ms ease-in-out;
+}
+
+
+/* Animation */
+/* Importing fonts from Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+.typing::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+}
+
+
+.typing {
+  height: 80vh;
+    position: relative;
+    -webkit-box-reflect: below 3px linear-gradient(transparent, #3333);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+
+   
+}
+
+.typing h2 {
+    position: relative;
+    color: white;
+    letter-spacing: 5px;
+    font-size: 4rem;
+    overflow: hidden;
+    margin-bottom: 0;
+    animation: type 5s steps(11) infinite;
+}
+
+@keyframes type {
+
+    0%,
+    100% {
+        width: 0px;
+    }
+
+    30%,
+    60% {
+        width: 394.09px;
+    }
+}
+
+@media(max-width: 330px) {
+    .typing h2 {
+        font-size: 3rem;
+        animation: type 5s steps(10) infinite;
+    }
+
+    @keyframes type {
+
+        0%,
+        100% {
+            width: 0px;
+        }
+
+        30%,
+        60% {
+            width: 305px;
+        }
+    }
+}
+
+/* Connect Us page */
+
+div.social-btn {
+  display: block;
+  width: 665px;
+  margin: 0 auto;
+  text-align: center;
+}
+div.social-btn a {
+  text-decoration: none;
+}
+div.social-btn div {
+  width: 130px;
+  display: inline-block;
+  float: left;
+  height: 120px;
+  line-height: 120px;
+  color: #fff;
+  margin-right: 3px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 35px;
+  font-size: 20px;
+  text-shadow:0px 0px 5px #000;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  margin-bottom: 50px;
+}
+div.social-btn a:last-child div {
+  margin-right: 0;
+}
+div.social-btn div:hover, div.social-btn div:active {
+  height: 135px;
+  padding-top: 15px;
+}
+i {
+  -moz-transition: all 0.4s ease-out;
+  -webkit-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+div.face span, div.twi span, div.in span, div.pin span, div.git span{
+  position: absolute;
+  left: 0;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  width: 100px;
+  padding: 0px 15px;
+  opacity: 0;
+  -moz-transition: all 0.6s ease-in;
+  -o-transition: all 0.6s ease-in;
+  -webkit-transition: all 0.6s ease-in;
+  transition: all 0.6s ease-in;
+  line-height: 110px;
+  font-size: 20px;
+}
+div.social-btn div:hover i  {
+  opacity: 0;
+}
+div.social-btn div:hover span {
+  opacity: 1;
+}
+div.face {
+  background: #3A5795;
+  -moz-box-shadow: 0px 4px 0px #1e469d;
+  -webkit-box-shadow: 0px 4px 0px #1e469d;
+  box-shadow: 0px 4px 0px #3e6d8d;
+  position: relative;
+}
+
+div.twi {
+  background: #5EA9DD;
+  -moz-box-shadow: 0px 4px 0px #186ba4;
+  -webkit-box-shadow: 0px 4px 0px #186ba4;
+  box-shadow: 0px 4px 0px #2b95df;
+  position: relative;
+}
+div.in {
+  background: #0177B5;
+  -moz-box-shadow: 0px 4px 0px #035e8e;
+  -webkit-box-shadow: 0px 4px 0px #035e8e;
+  box-shadow: 0px 4px 0px #035e8e;
+  position: relative;
+}
+div.pin {
+  background: #D73532;
+  -webkit-box-shadow: 0px 4px 0px #b51c19;
+  -moz-box-shadow: 0px 4px 0px #b51c19;
+  box-shadow: 0px 4px 0px #b51c19;
+  position: relative;
+}
+div.git {
+  background: #BBBBBB;
+  -webkit-box-shadow: 0px 4px 0px #b51c19;
+  -moz-box-shadow: 0px 4px 0px #b51c19;
+  box-shadow: 0px 4px 0px #9a9a9a;
+  position: relative;
+}
+div.git i {
+  text-shadow: none;
+}
+
+/* card */
+.cards{
+  height: 80vh;
+  width: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: large ;
+  border: 10px white solid;
 }
